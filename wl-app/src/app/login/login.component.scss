@@ -1,0 +1,89 @@
+.login-register {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100.5%;
+    width: 100.4%;
+    padding: 0;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: -1%;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.8;
+  }
+  
+  .login-box {
+    width: 320px;
+    margin: 0 auto;
+    .footer {
+      width: 100%;
+      left: 0px;
+      right: 0px;
+    }
+    .social {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+  
+  #recoverform {
+    display: none;
+  }
+
+  .card {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding-top: 0.5px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .box-title {
+    text-align: left;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+  }
+
+  .form-control {
+    padding: 8px 8px;
+    margin-left: -5% !important;
+    margin-bottom: 7% !important;
+    width: 90%;
+    margin: 0;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
+
+  .btn {
+    background-color: #117cff;
+    color: white;
+    padding: 6% 40%;
+    padding-bottom: 5%;
+    margin-left: -5% !important;
+    margin-bottom: 5% !important;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .container {
+    margin-top: 10%;
+  }
+
+  .container-2 {
+    margin-top: 20%;
+    margin-bottom: 0;
+  }
+
+  .text-info {
+    text-decoration: none;
+    color: #117cff;
+  }

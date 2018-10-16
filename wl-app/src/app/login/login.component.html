@@ -1,0 +1,27 @@
+<div class="login-register" style="background-image:url(assets/images/background.jpg);">
+  <div class="login-box card">
+    <div class="card-body">
+      <form class="form-horizontal form-material" id="loginform">
+        <h3 class="box-title m-b-20">Sign In</h3>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <input class="form-control" type="text" required="" placeholder="Username"> </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="form-control" type="password" required="" placeholder="Password"> </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12 container">
+            <a class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/dashboard/dashboard1']" (click)="onLoggedin()">Log In</a>
+          </div>
+        </div>
+        <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center container-2">
+            <div>Don't have an account? <a class="text-info m-l-5" [routerLink]="['/registration']"><b>Sign Up</b></a></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
