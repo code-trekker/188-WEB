@@ -2,28 +2,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100.5%;
-    width: 100.4%;
-    padding: 0;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    margin-top: -1%;
-    margin-left: -1%;
     font-family: Arial, Helvetica, sans-serif;
     opacity: 0.8;
+    overflow-x: hidden;
   }
   
   .login-box {
     width: 320px;
-    margin: 0 auto;
-    .footer {
-      width: 100%;
-      left: 0px;
-      right: 0px;
-    }
-    .social {
-      display: block;
-      margin-bottom: 30px;
-    }
+    margin-left: 38%
   }
   
   #recoverform {
@@ -34,9 +23,7 @@
     margin-top: 100px;
     margin-bottom: 30px;
     background-color: white;
-    padding-top: 0.5px;
-    padding-bottom: 20px;
-    padding-left: 15px;
+    
     text-align: center;
     border-radius: 10px;
   }
@@ -51,7 +38,7 @@
 
   .form-control {
     padding: 14px 8px;
-    margin-left: -5% !important;
+    margin-left: 0% !important;
     margin-bottom: 7% !important;
     width: 90%;
     margin: 0;
@@ -76,11 +63,11 @@
 
   .container {
     margin-top: 10%;
+    margin-left: 4%;
   }
 
   .container-2 {
     margin-top: 20%;
-    margin-bottom: 0;
   }
 
   .text-info {
