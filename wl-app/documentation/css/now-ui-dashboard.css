@@ -4180,8 +4180,8 @@ Created using IcoMoon - icomoon.io
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  background-color: #E3E3E3;
-  background-color: #ebecf1;
+  background-color: white;
+  background-color: white;
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -5250,7 +5250,7 @@ Created using IcoMoon - icomoon.io
     left: 0;
     z-index: 1032;
     visibility: visible;
-    overflow-y: visible;
+    overflow-y: none !important;
     padding: 0;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);

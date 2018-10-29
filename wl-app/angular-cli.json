@@ -21,16 +21,18 @@
       "styles": [
           "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
           "../node_modules/ngx-toastr/toastr.css",
+          "../node_modules/animate.css/animate.css",
           "./assets/scss/now-ui-dashboard.scss",
-          "./assets/demo/demo.css",
-          "styles.scss",
-          "./assets/sass/now-ui-kit.scss",
-          "./assets/css/demo.css"
+          "./assets/css/demo.css",
+          "styles.scss"
       ],
+      "stylePreprocessorOptions" : {
+        "includePaths": [
+          "."
+        ]
+      },
       "scripts": [
-        "../node_modules/rellax/rellax.min.js",
-        "../node_modules/chart.js/dist/Chart.min.js",
-        "assets/landing.js"
+        "../node_modules/chart.js/dist/Chart.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

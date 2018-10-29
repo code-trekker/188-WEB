@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import swal from 'sweetalert2';
 
 declare interface RouteInfo {
     path: string;
@@ -7,14 +9,14 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },
+    { path: '/home', title: 'Home',  icon: 'fas fa-home', class: '' },
+    { path: '/user', title: 'Profile',  icon: 'fas fa-user', class: '' },
+    { path: '/exercise', title: 'Exercises',  icon:'fas fa-dumbbell', class: '' },
+    { path: '/routine', title: 'Routines',  icon:'fas fa-clipboard-list', class: '' },
+    { path: '/workout', title: 'Workout',  icon:'far fa-calendar-check', class: '' },
+    { path: '/weight', title: 'Weight Tracker',  icon:'fas fa-weight', class: '' },
 
-    { path: '/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'design_bullet-list-67', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' }
+    // { path: '/landing', title: 'Logout',  icon:'fas fa-sign-out-alt', class: '' }
 ];
 
 @Component({
@@ -25,10 +27,24 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    
+    if (localStorage.getItem("token") === null) {
+        swal({
+            position: 'center',
+            type: 'warning',
+            title: "You're not logged in!",
+            text: 'Going back...',
+            showConfirmButton: false,
+            timer: 2000
+          });
+        setTimeout(() => { this.router.navigate(['']); }, 2000);
+    }
+
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+    
   }
   isMobileMenu() {
       if ( window.innerWidth > 991) {
@@ -36,4 +52,17 @@ export class SidebarComponent implements OnInit {
       }
       return true;
   };
+
+  signOut() {
+      localStorage.clear();
+      swal({
+        position: 'center',
+        type: 'warning',
+        title: 'Logging out...',
+        showConfirmButton: false,
+        timer: 1500
+      });
+      swal.showLoading();
+      setTimeout(() => { this.router.navigate(['']); }, 1500);
+  }
 }

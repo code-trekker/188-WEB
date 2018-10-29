@@ -1,4 +1,5 @@
 .login-register {
+    background-image:url("../../assets/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -39,7 +40,7 @@
 
   .form-control {
     padding: 14px 8px;
-    margin-left: -5% !important;
+    margin-left: -3% !important;
     margin-bottom: 7% !important;
     width: 90%;
     margin: 0;
@@ -49,7 +50,7 @@
   }
 
   .btn {
-    background-color: #117cff;
+    background-color: #F05F40;
     color: white;
     padding: 6% 40%;
     padding-bottom: 5%;
@@ -64,17 +65,18 @@
 
   .container {
     margin-top: 10%;
-    margin-right: -2%;
+    margin-right: -3%;
 
   }
 
   .container-2 {
-    margin-top: 20%;
-    margin-bottom: 0;
-    margin-left: -1%;
+    margin-top: 10%;
+    margin-left: 0%;
   }
 
   .text-info {
     text-decoration: none;
-    color: #117cff;
+    color: #F05F40;
   }
+
+  @import "../../assets/css/creative.css";

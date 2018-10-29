@@ -21,6 +21,7 @@
               <input class="form-control" required="" [(ngModel)]="password2" name="password2" type="password" placeholder="Confirm Password">
             </div>
             <p class="text-danger" *ngIf="show3">Passwords do not match</p>
+            <!-- <p class="text-danger" *ngIf="show4">Username already exists!</p> -->
           </div>
           <div class="form-group">
             <div class="col-xs-12 container">
@@ -39,13 +40,12 @@
   </div>
 </div>
 
-<swal
-  #confirmSwal
-  title="Are you sure?"
-  text="This cannot be undone"
-  type="question"
-  [showCancelButton]="true"
-  [focusCancel]="true"
-  (confirm)="registerUser()">
-></swal>
+<!-- <swal
+  #signUpSwal
+  title="Success"
+  text="Account registerd successfully!"
+  type="success"
+</swal> -->
+
+
 
