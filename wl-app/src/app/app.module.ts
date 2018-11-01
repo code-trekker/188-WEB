@@ -1,6 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {DataTableModule} from "angular-6-datatable";
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +25,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { RoutineComponent } from './routine/routine.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { ExerciseComponent } from './exercise/exercise.component';
     AdminLayoutComponent,
     Error404Component,
     ExerciseComponent,
+    RoutineComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -44,6 +47,7 @@ import { ExerciseComponent } from './exercise/exercise.component';
     HttpModule,
     ComponentsModule,
     NgbModule.forRoot(),
+    DataTableModule,
     ScrollToModule.forRoot(),
     ReactiveFormsModule,
     AppRoutingModule,

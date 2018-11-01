@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { RoutineComponent } from './routine/routine.component'
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: '404', component: Error404Component },
   { path: 'exercise', component: ExerciseComponent },
+  { path: 'routine', component: RoutineComponent },
   // { path: 'landing', component: LandingComponent }
 ];
 
