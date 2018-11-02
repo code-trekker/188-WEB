@@ -8,7 +8,8 @@ import { LandingComponent } from './landing/landing.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
-import { RoutineComponent } from './routine/routine.component'
+import { RoutineComponent } from './routine/routine.component';
+import { WorkoutComponent } from './workout/workout.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: '404', component: Error404Component },
   { path: 'exercise', component: ExerciseComponent },
   { path: 'routine', component: RoutineComponent },
+  { path: 'workout', component: WorkoutComponent },
   // { path: 'landing', component: LandingComponent }
 ];
 

@@ -146,7 +146,7 @@ export class ExerciseComponent implements OnInit {
   }
 
   removeExercise(selected:any) {
-    console.log(selected.eid);
+    console.log(selected.rid);
 
     axios({
       method: 'post',

@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import {NgsRevealModule} from 'ngx-scrollreveal';
+import { TagInputModule } from 'ngx-chips';
 
 
 
@@ -26,6 +27,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { RoutineComponent } from './routine/routine.component';
+import { WorkoutComponent } from './workout/workout.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +40,10 @@ import { RoutineComponent } from './routine/routine.component';
     Error404Component,
     ExerciseComponent,
     RoutineComponent,
+    WorkoutComponent,
   ],
   imports: [
+    TagInputModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,

@@ -1,0 +1,27 @@
+<div class="sidebar" data-color="red">
+  <app-sidebar></app-sidebar>
+</div>
+
+<div class="content" style="padding-top: 10px">
+    <div>
+      <h1>&emsp;</h1><h1 style="display: inline">Workout Logs</h1>&nbsp;&nbsp;&nbsp;
+      <button class="btn btn-lg" style="border-radius: 20px; margin-top: -0.5%" (click)="open(content)">
+        <span><i class="fa fa-plus"></i></span>&nbsp;ADD
+      </button>
+    </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header" style="font-family: 'Montserrat', sans-serif !important;">
+      <h4 class="modal-title text-center" id="modal-basic-title">Add New Routine</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" style="font-family: 'Montserrat', sans-serif !important;">
+        Hi
+    </div>
+    <div class="modal-footer" style="padding: 2%; font-family: 'Montserrat', sans-serif !important;">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click'); addRoutine()">Save</button>
+    </div>
+  </ng-template>
