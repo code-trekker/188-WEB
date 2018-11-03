@@ -16,7 +16,7 @@
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" required="" name="birthdate" type="text" placeholder="Birthday">
+              <input class="form-control" required="" name="birthdate" type="date">
             </div>
           </div>
           <div class="form-group">
@@ -26,7 +26,9 @@
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" required="" name="gender" type="text" placeholder="Gender">
+              <input class="form-gender" required="" name="gender" type="radio" checked="">Male <br>
+              <input class="form-gender2" required="" name="gender" type="radio">Female <br>
+              <input class="form-gender3" required="" name="gender" type="radio">Other <br>
             </div>
           </div>
           <div class="form-group">
@@ -41,12 +43,20 @@
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" required="" name="lifestyle_type" type="text" placeholder="Lifestyle Type">
+              <select name="lifestyle_type" class="form-control">
+                <option value="active">Active</option>
+                <option value="semi-active">Semi-Active</option>
+                <option value="sedentary">Sedentary</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
             <div class="col-xs-12">
-              <input class="form-control" required="" name="workout_aim" type="text" placeholder="Workout Aim">
+              <select name="workout_aim" class="form-control">
+                <option value="fit">Fit</option>
+                <option value="lean">Lean</option>
+                <option value="ripped">Ripped</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
