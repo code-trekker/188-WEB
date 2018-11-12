@@ -10,11 +10,11 @@ declare interface RouteInfo {
 }
 export const ROUTES: RouteInfo[] = [
     { path: '/home', title: 'Home',  icon: 'fas fa-home', class: '' },
-    { path: '/user', title: 'Profile',  icon: 'fas fa-user', class: '' },
+    { path: '/profile', title: 'Profile',  icon: 'fas fa-user', class: '' },
     { path: '/exercise', title: 'Exercises',  icon:'fas fa-dumbbell', class: '' },
     { path: '/routine', title: 'Routines',  icon:'fas fa-clipboard-list', class: '' },
     { path: '/workout', title: 'Workout',  icon:'far fa-calendar-check', class: '' },
-    { path: '/weight', title: 'Weight Tracker',  icon:'fas fa-weight', class: '' },
+    { path: '/weight', title: 'Weight',  icon:'fas fa-weight', class: '' },
 
     // { path: '/landing', title: 'Logout',  icon:'fas fa-sign-out-alt', class: '' }
 ];

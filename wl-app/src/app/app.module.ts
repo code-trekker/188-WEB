@@ -28,6 +28,8 @@ import { Error404Component } from './error404/error404.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { RoutineComponent } from './routine/routine.component';
 import { WorkoutComponent } from './workout/workout.component';
+import { ProfileComponent } from './profile/profile.component';
+import { WeightComponent } from './weight/weight.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { WorkoutComponent } from './workout/workout.component';
     ExerciseComponent,
     RoutineComponent,
     WorkoutComponent,
+    ProfileComponent,
+    WeightComponent,
   ],
   imports: [
     TagInputModule,
