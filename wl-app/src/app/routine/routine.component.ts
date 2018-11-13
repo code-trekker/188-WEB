@@ -18,6 +18,7 @@ export class RoutineComponent implements OnInit {
   private selectedExercises: Array<any> = [];
   private newRoutineExercise: Array<any> = [];
   private newAttribute: any = {};
+  private exerciseNames: Array<any> = [];
   constructor(private modalService: NgbModal, public router: Router) { }
   
   data;
@@ -34,8 +35,8 @@ export class RoutineComponent implements OnInit {
   
 
   ngOnInit() {
-    this.fieldArray.push(this.newAttribute);
-    this.newAttribute = {};
+    // this.fieldArray.push(this.newAttribute);
+    // this.newAttribute = {};
 
     axios({
       method: 'post',
@@ -51,7 +52,7 @@ export class RoutineComponent implements OnInit {
     })
     .then(response => {
       this.data = response.data.routines;
-      console.log(response.data.routines);
+      // console.log(response.data.routines);
     })
     .catch(error => {
       console.log(error)
@@ -90,10 +91,17 @@ export class RoutineComponent implements OnInit {
   deleteFieldValue(index) {
       this.fieldArray.splice(index, 1);
       this.selectedExercises.splice(index, 1);
+      this.exerciseNames.splice(index,1);
+      console.log(this.selectedExercises);  
   }
 
   getData(item) {
-    this.selectedExercises.push(item);
+    this.selectedExercises.push(item.eid);
+    this.exerciseNames.push(item.name);
+    console.log(this.selectedExercises);
+    console.log(this.fieldArray);
+    console.log(this.exerciseNames);
+    console.log(item)
   }
   
   addRoutine() {

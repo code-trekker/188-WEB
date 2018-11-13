@@ -83,7 +83,17 @@
         </div>
         <div class="form-group">
             <label>Choose Exercise(s)</label>
-          </div>
+            <div class="row">
+              <div class="col-sm-10">
+                <select class="form-control" id="exercises" [(ngModel)]="field" name="exercise{{i}}" style="padding: 5px;">
+                  <option *ngFor="let e of exercises" [ngValue]="e">{{e.name}}</option>
+                </select>
+              </div>
+              <div class="col-sm-2" style="margin-left: -5%">
+                <button style="margin-top: 2px; width: 75px; height: 35px" class="btn btn-sm btn-success btn-block" (click)="addFieldValue(i);getData(field);"><span><i class="fa fa-plus"></i></span></button>
+              </div>
+            </div>
+        </div>
           <div class="form-group" style="margin-top: -5%">
             <table class="table table-striped">
               <thead>
@@ -93,14 +103,11 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let field of fieldArray; let i = index">
+                <tr *ngFor="let field of exerciseNames; let i = index">
                   <td>
-                    <select class="form-control" id="exercises" [(ngModel)]="field.data" name="exercise{{i}}" style="padding: 5px;">
-                      <option *ngFor="let e of exercises" [ngValue]="e.eid">{{e.name}}</option>
-                    </select>
+                    {{field}}
                   </td>
                   <td>
-                    <button class="btn btn-sm btn-success" (click)="addFieldValue(i);getData(field.data);"><span><i class="fa fa-plus"></i></span></button>&nbsp;
                     <button class="btn btn-sm btn-danger" (click)="deleteFieldValue(i)"><span><i class="fa fa-trash"></i></span></button>
                   </td>
                 </tr>
