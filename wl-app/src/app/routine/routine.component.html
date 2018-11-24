@@ -27,7 +27,7 @@
           <th style="display: none">
             EID
           </th>
-          <th>Action</th>
+          <th width="20%">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -37,7 +37,7 @@
               <td>{{item.muscle_area}}</td>
               <td>{{item.exercise_list}}</td>
               <td style="display: none">{{item.eid}}</td>
-              <td>
+              <td class="">
                 <!-- <button class="btn btn-sm btn-success" (click)="editRoutine(item);open(edit)"><span><i class="fa fa-pencil"></i></span></button>&nbsp; -->
                 <button class="btn btn-sm btn-danger" [swal]="{ title: 'Delete this routine?', type:'question', showCancelButton: true }"
                 (confirm)="removeRoutine(item)"><span><i class="fa fa-trash"></i></span></button>
@@ -183,16 +183,6 @@
                       <button class="btn btn-sm btn-danger" (click)="deleteFieldValue(i)"><span><i class="fa fa-trash"></i></span></button>
                     </td>
                   </tr>
-                  <!-- <tr>
-                    <td>
-                      <select class="form-control" id="exercises" [(ngModel)]="newRoutineExercise.data" name="exercise{{i}}{{i}}" style="padding: 5px;">
-                        <option *ngFor="let e of exercises" [ngValue]="e">{{e.name}}</option>
-                      </select>
-                    </td>
-                    <td>
-                      <button class="btn btn-sm btn-success" (click)="addFieldValue(i)"><span><i class="fa fa-plus"></i></span></button>&nbsp;
-                    </td>
-                  </tr> -->
                 </tbody>
               </table>
             </div>

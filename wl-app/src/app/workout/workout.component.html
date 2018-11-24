@@ -32,7 +32,7 @@
                 <td style="display: none">{{item.wid}}</td>
                 <td>{{item.day}}</td>
                 <td>{{item.routine}}</td>
-                <td>{{item.notes}}</td>
+                <td class="ellipsis" ngbTooltip="{{item.notes}}" container="body">{{ (item.notes.length>90)? (item.notes | slice:0:90)+'...':(item.notes) }}</td>
                 <td>
                   <button class="btn btn-sm btn-danger" [swal]="{ title: 'Delete this exercise?', type:'question', showCancelButton: true }"
                   (confirm)="removeWorkout(item)"><span><i class="fa fa-trash"></i></span></button>

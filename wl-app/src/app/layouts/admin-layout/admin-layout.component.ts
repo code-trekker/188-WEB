@@ -26,8 +26,13 @@ export class AdminLayoutComponent implements OnInit {
   exercises;
   routines;
   workouts;
+  weight_data: Array<any>;
+  weight_dates : Array<any>;
+  chart_data;
 
   constructor( public location: Location, private router: Router) {}
+
+  // new Promise((resolve, reject) => { executer_fn });
 
   ngOnInit() {
       const isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
@@ -65,6 +70,75 @@ export class AdminLayoutComponent implements OnInit {
           let ps = new PerfectScrollbar(elemMainPanel);
           ps = new PerfectScrollbar(elemSidebar);
       }
+
+
+    // code for weight chart
+    axios({
+      method: 'post',
+      url: 'http://localhost:8000/api/weight_chart',
+      headers: {
+        'Content-Type' : 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'crossorigin' : true
+      },
+      data: {
+        user_id: localStorage.getItem("user_id")
+      }
+    })
+    .then(response => {
+      this.weight_dates = response.data.weight_date;
+      this.weight_data = response.data.weight_data.map(parseFloat);
+
+      //   code for chart here
+      this.chart = new Chart(this.chartRef.nativeElement, {
+        type: 'line',
+        data: {
+          labels: this.weight_dates, // your labels array
+          datasets: [
+            {
+              data: this.weight_data, // your data array
+              borderColor: '#e0573a',
+              fill: true
+            }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          scales: {
+            xAxes: [{
+              display: true
+            }],
+            yAxes: [{
+              display: true
+            }],
+          },
+          title: {
+            display: true,
+            text: 'Weight Tracker',
+            fontFamily: "'Montserrat', sans-serif",
+            fontColor: '#272727',
+            fontSize: 18,
+            padding: 12
+          },
+          layout: {
+            padding: {
+                left: 10,
+                right: 20,
+                top: 0,
+                bottom: 0
+            }
+          },
+          gridLines: {
+            drawOnChartArea: true
+          },
+        }
+      });
+    })
+    .catch(error => {
+      console.log(error)
+    })
 
     // code for exercise table
     axios({
@@ -127,55 +201,7 @@ export class AdminLayoutComponent implements OnInit {
     })
     .catch(error => {
       console.log(error)
-    });
-
-    //   code for chart here
-    this.chart = new Chart(this.chartRef.nativeElement, {
-      type: 'line',
-      data: {
-        labels: ["10/1/18", "10/2/18", "10/3/18", "10/4/18", "10/5/18", "10/6/18", "10/7/18"], // your labels array
-        datasets: [
-          {
-            data: [65, 59, 80, 81, 56, 55, 40], // your data array
-            borderColor: '#e0573a',
-            fill: true
-          }
-        ]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            display: true
-          }],
-          yAxes: [{
-            display: true
-          }],
-        },
-        title: {
-          display: true,
-          text: 'Weight Tracker',
-          fontFamily: "'Montserrat', sans-serif",
-          fontColor: '#272727',
-          fontSize: 18,
-          padding: 12
-        },
-        layout: {
-          padding: {
-              left: 10,
-              right: 20,
-              top: 0,
-              bottom: 0
-          }
-        },
-        gridLines: {
-          drawOnChartArea: true
-        },
-      }
-    });
-    
+    });   
   }
 
 

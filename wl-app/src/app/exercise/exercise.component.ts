@@ -60,11 +60,11 @@ export class ExerciseComponent implements OnInit {
   
 
   addExercise() {
-    console.log(this.name);
-    console.log(this.category);
-    console.log(this.equipment);
-    console.log(this.primary_muscle);
-    console.log(this.secondary_muscle);
+      // console.log(this.name);
+      // console.log(this.category);
+      // console.log(this.equipment);
+      // console.log(this.primary_muscle);
+      // console.log(this.secondary_muscle);
 
     axios({
       method: 'post',

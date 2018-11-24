@@ -40,13 +40,13 @@ export class ProfileComponent implements OnInit {
     })
     .then(response => {
       this.profile = response.data.profile;
-      this.first_name = response.data.profile[0]["first_name"]
-      this.last_name = response.data.profile[0]["last_name"]
-      this.gender = response.data.profile[0]["gender"]
-      this.birthday = response.data.profile[0]["birthday"]
-      this.workout_aim = response.data.profile[0]["workout_aim"]
-      this.lifestyle_type = response.data.profile[0]["lifestyle_type"]
-      this.height = parseFloat(response.data.profile[0]["height"])
+      this.first_name = response.data.profile[0]["first_name"];
+      this.last_name = response.data.profile[0]["last_name"];
+      this.gender = response.data.profile[0]["gender"];
+      this.birthday = response.data.profile[0]["birthday"];
+      this.workout_aim = response.data.profile[0]["workout_aim"];
+      this.lifestyle_type = response.data.profile[0]["lifestyle_type"];
+      this.height = parseFloat(response.data.profile[0]["height"]);
       this.weight = parseFloat(response.data.profile[0]["weight"]);
 
       // localStorage.setItem("first_name", this.first_name);
@@ -58,9 +58,9 @@ export class ProfileComponent implements OnInit {
       // localStorage.setItem("height", this.height);
       // localStorage.setItem("weight", this.weight);
       
-      if (response.data.pid === null) {
-        localStorage.setItem("pid", "");
-      }
+      console.log(response.data.pid);
+      localStorage.setItem("pid", response.data.pid);
+      
       if (this.profile.weight === null || this.profile.height === null) {
         this.bmi = "";
       } else {
@@ -92,11 +92,11 @@ export class ProfileComponent implements OnInit {
         first_name: this.first_name,
         last_name: this.last_name,
         gender: this.gender,
-        birthday: this.birthday,
+        birthday: this.birthday.toString(),
         workout_aim: this.workout_aim,
         lifestyle_type: this.lifestyle_type,
-        weight: this.weight,
-        height: this.height
+        weight: this.weight.toString(),
+        height: this.height.toString()
       }
     })
     .then(response => {
